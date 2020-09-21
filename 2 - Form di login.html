@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            form {
+                width:300px;
+                margin: 20px auto;
+            }
+            form *{
+                display:block;
+            }
+            #formFormattata {
+                text-align: center;
+            }
+            #formFormattata *{
+                margin: 10px auto;
+            }
+            #formFormattata div#bloccoRicordami *{
+                display: inline-block;
+                margin-left: 10px;
+            }
+            #formFormattata2 {
+                text-align: left;
+            }
+            #formFormattata2 *{
+                margin: 10px 0px;
+            }
+            #formFormattata2 input[type]{
+                border-radius: 5px;
+            }
+            #formFormattata2 input[type="submit"]{
+                background-color: white;
+                border: 1px solid black;
+            }
+            #formFormattata2 div#bloccoRicordami *{
+                display: inline-block;
+                margin-left: 0px;
+            }
+            #formFormattata2 div#bloccoRicordami *:last-child{
+                margin-left: 10px;
+            }
+            .form {
+                display: inline-block;
+                margin-left: 20px;
+                padding:0px 10px;
+                border: 1px solid #cccccc;
+            }
+            #formFormattata3 {
+                text-align: left;
+                background-color: #293133;
+                padding: 20px;
+            }
+            #formFormattata3 *{
+                margin: 10px 0px;
+                color:white;
+            }
+            #formFormattata3 input[type]{
+                border-radius: 5px;
+            }
+            #formFormattata3 input[type="password"], #formFormattata3 input[type="text"]{
+                color: black;
+            }
+            #formFormattata3 input[type="submit"]{
+                background-color: white;
+                border: 1px solid black;
+                color:black;
+                padding: 5px 20px;
+            }
+            #formFormattata3 div#bloccoRicordami *{
+                display: inline-block;
+                margin-left: 0px;
+            }
+            #formFormattata3 div#bloccoRicordami *:last-child{
+                margin-left: 10px;
+            }
+            #formFormattata4 {
+                text-align: left;
+                background-color: #ddddff;
+                padding: 20px;
+            }
+            #formFormattata4 *{
+                margin: 10px 0px;
+                color: #773232;
+                font-weight: bold;
+            }
+            #formFormattata4 input[type]{
+                border-radius: 2px;
+                width: 100%;
+            }
+            #formFormattata4 input[type="password"], #formFormattata4 input[type="text"]{
+                color: black;
+                padding: 5px 3px;
+                border-radius: 5px;;
+            }
+            #formFormattata4 input[type="submit"]{
+                background-color: white;
+                border: 1px solid black;
+                padding: 5px 20px;
+                border-radius: 5px;
+                width:60%;
+                margin: 0 auto;
+                color: #773232;
+                font-weight: bold;
+            }
+            #formFormattata4 div#bloccoRicordami *{
+                display: inline-block;
+                width:auto;
+            }
+            #formFormattata4 div#bloccoRicordami *:last-child{
+                margin-left: 10px;
+            }
+
+            #formFormattata5 {
+                text-align: left;
+                background-color: white;
+                padding: 20px;
+            }
+            div.titoloForm {
+                text-align: center;
+                font-size: 1.75em;
+                border-bottom: 1px solid #cccccc;
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+            
+            #formFormattata5 *{
+                margin: 10px 0px;
+                color: #773232;
+                font-weight: bold;
+            }
+            #formFormattata5 *:first-child{
+                margin: 0px;
+            }
+            #formFormattata5 input[type]{
+                border-radius: 2px;
+                width: 100%;
+            }
+            #formFormattata5 input[type="password"], #formFormattata5 input[type="text"]{
+                color: black;
+                padding: 5px 3px;
+                border-radius: 5px;;
+            }
+            #formFormattata5 input[type="submit"]{
+                background-color: white;
+                border: 1px solid black;
+                padding: 5px 20px;
+                border-radius: 5px;
+                width:60%;
+                margin: 0 auto;
+                color: #773232;
+                font-weight: bold;
+            }
+            #formFormattata5 div#bloccoRicordami *{
+                display: inline-block;
+                width:auto;
+            }
+
+            #formFormattata6 *{
+                margin: 10px 0px;
+                color: #773232;
+                font-weight: bold;
+            }
+            #formFormattata6 *:first-child{
+                margin: 0px;
+            }
+            #formFormattata6 input[type]{
+                border-radius: 2px;
+                width: 100%;
+            }
+            #formFormattata6 input[type="password"], #formFormattata6 input[type="text"]{
+                color: black;
+                padding: 15px 0px;
+                border-radius: 2px;;
+                text-align: center;
+            }
+            #formFormattata6 input[type="submit"]{
+                background-color: white;
+                color: black;
+                padding: 15px 0px;
+                border-radius: 2px;;
+                text-align: center;
+            }
+
+            #formFormattata7 *{
+                margin: 10px 0px;
+                color: #773232;
+                font-weight: bold;
+                display: inline-block;
+            }
+            #formFormattata7 *:first-child{
+                margin: 0px;
+            }
+            #formFormattata7 input[type]{
+                border-radius: 2px;
+            }
+            #formFormattata7 input[type="password"], #formFormattata7 input[type="text"]{
+                display: inline-block;
+                color: black;
+                padding: 5% 5%;
+                border-radius: 2px;;
+                width: calc(39% - 2px);
+                border:none;
+            }
+
+            #formFormattata7 input[type="password"]:focus, #formFormattata7 input[type="text"]:focus{
+                border: 1px solid #cccccc;
+            }
+            #formFormattata7 input[type="password"]{
+                border-left: 1px solid #cccccc;
+            }
+            #formFormattata7 input[type="submit"]{
+                background-color: black;
+                color: white;
+                padding: 15px 0px;
+                border-radius: 2px;;
+                text-align: center;
+                display: block;
+                width:100%;
+            }
+
+            #formFormattata8 {
+                text-align: left;
+                background-color: white;
+                padding: 20px;
+            }
+            div.titoloForm8 {
+                text-align: center;
+                font-size: 1.75em;
+                border-bottom: 1px solid #cccccc;
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+            
+            #formFormattata8 *{
+                margin: 10px 0px;
+            }
+            #formFormattata8 *:first-child{
+                margin: 0px;
+            }
+            #formFormattata8 input[type]{
+                border:none;
+                border-bottom: 1px solid #cccccc;
+                width: 100%;
+            }
+            #formFormattata8 input[type="password"], #formFormattata5 input[type="text"]{
+                color: black;
+                padding: 5px 3px;
+                border-radius: 5px;;
+            }
+            #formFormattata8 input[type="submit"]{
+                background-color: white;
+                border: 1px solid black;
+                padding: 5px 20px;
+                border-radius: 5px;
+                width:60%;
+                margin: 0 auto;
+                color: #773232;
+                font-weight: bold;
+            }
+            #formFormattata8 div#bloccoRicordami *{
+                display: inline-block;
+                width:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form">
+        <!--Form Base-->
+        <form action="#" method="post">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <label for="checkRicordami">Ricordami</label>
+            <input type="checkbox" id="checkRicodami"/>
+            <input type="submit"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata-->
+        <form action="#" method="post" id="formFormattata">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <div id="bloccoRicordami">
+                <label for="checkRicordami">Ricordami</label>
+                <input type="checkbox" id="checkRicodami"/>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata 2-->
+        <form action="#" method="post" id="formFormattata2">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <div id="bloccoRicordami">
+                <label for="checkRicordami">Ricordami</label>
+                <input type="checkbox" id="checkRicodami"/>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata 3-->
+        <form action="#" method="post" id="formFormattata3">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <div id="bloccoRicordami">
+                <label for="checkRicordami">Ricordami</label>
+                <input type="checkbox" id="checkRicodami"/>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata 4-->
+        <form action="#" method="post" id="formFormattata4">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <div id="bloccoRicordami">
+                <label for="checkRicordami">Ricordami</label>
+                <input type="checkbox" id="checkRicodami"/>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata 5-->
+        <div class="titoloForm">Login</div>
+        <form action="#" method="post" id="formFormattata5">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <div id="bloccoRicordami">
+                <label for="checkRicordami">Ricordami</label>
+                <input type="checkbox" id="checkRicodami"/>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata 6-->
+        <div class="titoloForm">Login</div>
+        <form action="#" method="post" id="formFormattata6">
+            <input type="text" placeholder="Username" id="Username"/>
+            <input type="password" placeholder="Password" id="password"/>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form" id="form7">
+        <!--Form formattata 7-->
+        <div class="titoloForm">Login</div>
+        <form action="#" method="post" id="formFormattata7">
+            <input type="text" placeholder="Username" id="Username"/>
+            <input type="password" placeholder="Password" id="password"/>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    <div class="form">
+        <!--Form formattata 8-->
+        <div class="titoloForm">Login</div>
+        <form action="#" method="post" id="formFormattata8">
+            <label for="Username">
+                Username
+            </label>
+            <input type="text" placeholder="Username" id="Username"/>
+            <label for="password">
+                Password
+            </label>
+            <input type="password" placeholder="Password" id="password"/>
+            <div id="bloccoRicordami">
+                <label for="checkRicordami">Ricordami</label>
+                <input type="checkbox" id="checkRicodami"/>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+    </body>
+</html>
